@@ -7,12 +7,20 @@ Template.madLib.onCreated(function helloOnCreated() {
 });
 
 Template.madLib.helpers({
-
 });
 
 Template.madLib.events({
-  'click #submit-button'(event, instance) {
+  'submit form'(event, instance) {
     event.preventDefault();
-    console.log ("Hello World!");
+    let exclamation = event.target.exclaim1.value;
+    let adverb = event.target.adverb1.value;
+    let noun = event.target.noun1.value;
+    let verb = event.target.verb1.value;
+
+    let madLib = '"' + exclamation + '!" you say, as you ' + 
+      adverb + ' jump onto your ' + noun + ' and ' + verb +
+      ' into the sunset.';
+
+    console.log(madLib);
   }
 });
