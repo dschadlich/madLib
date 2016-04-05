@@ -17,9 +17,8 @@ Template.madLib.events({
     let noun = event.target.noun1.value;
     let verb = event.target.verb1.value;
 
-    let madLib = '"' + exclamation + '!" you say, as you ' + 
-      adverb + ' jump onto your ' + noun + ' and ' + verb +
-      ' into the sunset.';
+    let madLib = `"${exclamation}!" you say, as you ${adverb} jump onto your ` + 
+      `${noun} and ${verb} into the sunset.`;
 
     console.log(madLib);
   }
