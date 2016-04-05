@@ -17,8 +17,10 @@ Template.madLib.events({
     let noun = event.target.noun1.value;
     let verb = event.target.verb1.value;
 
-    let madLib = `"${exclamation}!" you say, as you ${adverb} jump onto your ` + 
+    let madLib = `"${exclamation}!" you say, as you ${adverb} jump onto your ` +
       `${noun} and ${verb} into the sunset.`;
+      
+      $("#page_title").hide().text (madLib).fadeIn ("slow").css ('background-color', "#0000FF");
 
     console.log(madLib);
   }
